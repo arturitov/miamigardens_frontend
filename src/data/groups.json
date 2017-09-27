@@ -1,0 +1,154 @@
+[
+	{
+	    "_id": "596d2cf803d32c0011b24f7a",
+	    "neighborhood": "33321",
+	    "description": "Brand New Beautiful townhomes, small complex , located in the Golfview Tamarac, community with only 12 units, 3 Bed and 2 & 1/2 baths, great closets, upgraded kitchen with stainless appliances and granite. You will be first moving in. Hurricane windows protection. Near schools, parks, shopping. Golfview units have covered entryways, Spanish tile roofs, and decorative window shutters.",
+	    "name": "Golfview",
+	    "groupType": "town-homes",
+	    "employee": {
+	        "$oid": "596d03146657cc0011d46ee2"
+	    },
+	    "address": "8400 W McNab Rd Tamarac, FL 33321 ",
+	    "client": {
+	        "$oid": "596d03146657cc0011d46ee3"
+	    },
+	    "rules": "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/golfview/Golfview+Townhome+Rules+and+Regulations.pdf",
+	    "images": [
+	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/golfview/1-min.JPG",
+	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/golfview/10-min.JPG",
+	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/golfview/11-min.JPG",
+	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/golfview/12-min.JPG",
+	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/golfview/13-min.JPG",
+	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/golfview/18-min.JPG",
+	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/golfview/15-min.JPG",
+	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/golfview/17-min.JPG",
+	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/golfview/19-min.JPG",
+	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/golfview/2-min.JPG",
+	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/golfview/20-min.JPG",
+	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/golfview/21-min.JPG",
+	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/golfview/22-min.JPG",
+	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/golfview/23-min.JPG",
+	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/golfview/24-min.JPG",
+	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/golfview/25-min.JPG",
+	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/golfview/26-min.JPG",
+	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/golfview/27-min.JPG",
+	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/golfview/28-min.JPG",
+	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/golfview/29-min.JPG"
+	    ],
+	    "thumbnail": [
+	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/golfview/golfview_thumbnail.jpg"
+	    ],
+	    "schools": [
+	        {
+	            "name": "Challenger Elementary",
+	            "tel": "7543225750",
+	            "website": "https://www.browardschools1.com/challenger"
+	        },
+	        {
+	            "name": "Millennium Middle",
+	            "tel": "7543223900",
+	            "website": "http://millenniumstars.org/"
+	        },
+	        {
+	            "name": "Piper High",
+	            "tel": "7543221700",
+	            "website": "https://www.browardschools1.com/piper"
+	        }
+	    ],
+	    "emergency": {
+	        "police": "9547202225",
+	        "fire": "9545973800"
+	    },
+	    "utility": {
+	        "water": {
+	            "name": "Tamarac Water Department",
+	            "tel": "9545973750"
+	        },
+	        "electricity": {
+	            "name": "FPL",
+	            "tel": "18002263545"
+	        },
+	        "trash": [
+	            "Tuesdays",
+	            "Thursdays"
+	        ]
+	    },
+	    "__v": 0
+	},
+	{
+	    "_id": "591234f803d32c0011b24f7a",
+	    "neighborhood": "33169",
+	    "description": "Solabella is located in Miami Gardens, Florida in the 33169 zip code. This apartment community was built in 2007 and has 2 stories with 210 units.",
+	    "name": "Solabella",
+	    "groupType": "condos",
+	    "employee": {
+	        "$oid": "596d03146657cc0011d46ee2"
+	    },
+	    "address": "17359 NW 7th Ave, Miami Gardens, FL 33169 ",
+	    "client": {
+	        "$oid": "596d03146657cc0011d46ee3"
+	    },
+	    "rules": "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/golfview/Golfview+Townhome+Rules+and+Regulations.pdf",
+	     "images": [
+	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/golfview/1-min.JPG",
+	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/golfview/10-min.JPG",
+	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/golfview/11-min.JPG",
+	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/golfview/12-min.JPG",
+	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/golfview/13-min.JPG",
+	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/golfview/18-min.JPG",
+	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/golfview/15-min.JPG",
+	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/golfview/17-min.JPG",
+	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/golfview/19-min.JPG",
+	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/golfview/2-min.JPG",
+	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/golfview/20-min.JPG",
+	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/golfview/21-min.JPG",
+	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/golfview/22-min.JPG",
+	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/golfview/23-min.JPG",
+	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/golfview/24-min.JPG",
+	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/golfview/25-min.JPG",
+	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/golfview/26-min.JPG",
+	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/golfview/27-min.JPG",
+	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/golfview/28-min.JPG",
+	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/golfview/29-min.JPG"
+	    ],
+	    "thumbnail": [
+	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/golfview/golfview_thumbnail.jpg"
+	    ],
+	    "schools": [
+	        {
+	            "name": "Parkway Elementary",
+	            "tel": "3056530066",
+	            "website": "http://pwe.dadeschools.net/"
+	        },
+	        {
+	            "name": "Norland Middle",
+	            "tel": "3056531210",
+	            "website": "http://wwwnms.dade.k12.fl.us/"
+	        },
+	        {
+	            "name": "Miami Norland Senior High",
+	            "tel": "3056531416",
+	            "website": "http://mnorland.dadeschools.net/"
+	        }
+	    ],
+	    "emergency": {
+	        "police": "3054746473",
+	        "fire": "7863315000"
+	    },
+	    "utility": {
+	        "water": {
+	            "name": "Tamarac Water Department",
+	            "tel": "9545973750"
+	        },
+	        "electricity": {
+	            "name": "FPL",
+	            "tel": "18002263545"
+	        },
+	        "trash": [
+	            "Tuesdays",
+	            "Thursdays"
+	        ]
+	    },
+	    "__v": 0
+	}
+]
