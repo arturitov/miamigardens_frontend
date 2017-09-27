@@ -65,7 +65,7 @@ class Application extends React.Component{
 			agent.Application.submit(data, destination);
 
 			console.log("form submitted");
-			window.location.reload();
+			// window.location.reload();
 		};
 	}
 
