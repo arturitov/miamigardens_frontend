@@ -131,7 +131,14 @@ class Application extends React.Component{
 
 		var group = this.props.group;
 
-		
+
+		var address;
+
+		var propertyInformation = {
+			unitNumber : this.props.unitNumber,
+			unitMonthlyPay : this.props.unitMonthlyPay,
+		}
+
 		var applicantInfo = {
 			firstName: this.props.firstName,
 			midddleName: this.props.midddleName,
@@ -142,7 +149,8 @@ class Application extends React.Component{
 			homePhone: this.props.homePhone,
 			cellPhone: this.props.cellPhone,
 			socialSecurity: this.props.socialSecurity,
-			driversLicense: this.props.driversLicense
+			driversLicense: this.props.driversLicense,
+			credit: this.props.credit
 		}
 
 		var additionalOccupants = {
@@ -154,7 +162,13 @@ class Application extends React.Component{
 			relationship2ApplicantTwo: this.props.relationship2ApplicantTwo,
 			nameThree: this.props.nameThree,
 			dobThree: this.props.dobThree,
-			relationship2ApplicantThree: this.props.relationship2ApplicantThree
+			relationship2ApplicantThree: this.props.relationship2ApplicantThree,
+			nameFour: this.props.nameFour,
+			dobFour: this.props.dobFour,
+			relationship2ApplicantFour: this.props.relationship2ApplicantFour,
+			nameFive: this.props.nameFive,
+			dobFive: this.props.dobFive,
+			relationship2ApplicantFive: this.props.relationship2ApplicantFive
 		}
 
 		var car = {
@@ -224,6 +238,20 @@ class Application extends React.Component{
 			additional: this.props.additional
 		}
 
+		var vehicles = {
+			model1: this.props.model1,
+			make1: this.props.make1,
+			color1: this.props.color1,
+			year1: this.props.year1,
+			license1: this.props.license1,
+			insurance1: this.props.insurance1,
+			model2: this.props.model2,
+			make2: this.props.make2,
+			color2: this.props.color2,
+			year2: this.props.year2,
+			license2: this.props.license2,
+			insurance2: this.props.insurance2,
+		}
 		var data = {
 				applicantInfo, 
 				additionalOccupants, 
@@ -232,7 +260,9 @@ class Application extends React.Component{
 				questions, 
 				license, 
 				income,
-				personalReferences
+				personalReferences,
+				propertyInformation,
+				vehicles
 			 };
 		//this.props.applicantInfo;
 
@@ -257,7 +287,8 @@ class Application extends React.Component{
 						groupNum = i;
 					}
 				};
-				var address = groups[groupNum].address;
+				address = groups[groupNum].address;
+				propertyInformation.address = address;
 				var rules = groups[groupNum].rules;
 			}
 		}
@@ -265,76 +296,6 @@ class Application extends React.Component{
 			<option key={group._id} value={group._id}>{group.name}</option>
 		);
 
-		if (this.props.vehicleNumber > 0) {
-			console.log(vehicleNumber);
-			vehicles = [];
-			for (var i = 0; i < Number(vehicleNumber[0]); i++) {
-				vehicles.push(i);
-			};
-			vehicleList = vehicles.map((vehicles) =>
-				<div key={vehicles} className="row">
-					<div className="col-md-2">
-						<fieldset className="form-group">
-							<label>Make</label>
-								<input
-									className="form-control form-control-lg"
-									type="text"
-									placeholder=""/>
-						</fieldset>
-					</div>
-					<div className="col-md-2">
-						<fieldset className="form-group">
-							<label>Model</label>
-								<input
-									className="form-control form-control-lg"
-									type="text"
-									placeholder=""/>
-						</fieldset>
-					</div>
-					<div className="col-md-2">
-						<fieldset className="form-group">
-							<label>Color</label>
-								<input
-									className="form-control form-control-lg"
-									type="text"
-									placeholder=""/>
-						</fieldset>
-					</div>
-					<div className="col-md-2">
-						<fieldset className="form-group">
-							<label>Year</label>
-								<input
-									className="form-control form-control-lg"
-									type="text"
-									placeholder=""/>
-						</fieldset>
-					</div>
-					<div className="col-md-2">
-						<fieldset className="form-group">
-							<label>License No.</label>
-								<input
-									className="form-control form-control-lg"
-									type="text"
-									placeholder=""/>
-						</fieldset>
-					</div>
-					<div className="col-md-2">
-						<fieldset className="form-group">
-							<label>Insurance Policy #</label>
-								<input
-									className="form-control form-control-lg"
-									type="text"
-									placeholder=""/>
-						</fieldset>
-					</div>
-				</div>
-
-			);
-	
-			console.log(vehicleList);
-
-	
-		}
 
 		return(
 			<div className="container page">
@@ -371,11 +332,26 @@ class Application extends React.Component{
 							</div>
 							<div className="col-md-2">
 			                  	<fieldset className="form-group">
+									<label>Unit Number</label>
+										<input
+											className="form-control form-control-lg"
+											type="text"
+											placeholder="203"
+											value={propertyInformation.unitNumber}
+											onChange={this.changeValue}
+											id="unitNumber"/>
+								</fieldset>
+							</div>
+							<div className="col-md-2">
+			                  	<fieldset className="form-group">
 									<label>Monthly Rent</label>
 										<input
 											className="form-control form-control-lg"
 											type="text"
-											placeholder=""/>
+											placeholder=""
+											value={propertyInformation.unitMonthlyPay}
+											onChange={this.changeValue}
+											id="unitMonthlyPay"/>
 								</fieldset>
 							</div>
 						</div>
@@ -520,6 +496,23 @@ class Application extends React.Component{
 		                	</fieldset>
 		                </div>
 					</div>
+					<div className="row">
+						<div className="col-md-2">
+							<fieldset className="form-group">
+			                  	<label>Credit Score</label>
+			                  	<select name="groups" 
+			                  	  className="form-control form-control-lg"
+			                  	  value={applicantInfo.credit}
+			                  	  onChange={this.changeValue}
+			                  	  id="credit">
+			                  	    <option>--</option>
+			                  		<option value="< 500">{"<"} 500</option>
+			                  		<option value="500 - 600">500 - 600</option>
+			                  		<option value="> 600">{">"} 600</option>
+			                  	</select>
+			                  </fieldset>
+						</div>
+					</div>
 					<h4>Additional Occupants</h4>
 					<div className="row">
 						<div className="col-md-6">
@@ -631,6 +624,82 @@ class Application extends React.Component{
 									placeholder=""
 									value={additionalOccupants.relationship2ApplicantThree}
 									id="relationship2ApplicantThree"
+									onChange={this.changeValue}/>
+							</fieldset>
+						</div>
+					</div>
+					<div className="row">
+						<div className="col-md-6">
+							<fieldset className="form-group">
+							<label>First, Middle, Last Name</label>
+								<input
+									className="form-control form-control-lg"
+									type="text"
+									placeholder="First, Middle, Last Name"
+									value={additionalOccupants.nameFour}
+									id="nameFour"
+									onChange={this.changeValue}/>
+							</fieldset>
+						</div>
+						<div className="col-md-2">
+							<fieldset className="form-group">
+							<label>DOB</label>
+								<input
+									className="form-control form-control-lg"
+									type="text"
+									placeholder="##/##/##"
+									value={additionalOccupants.dobFour}
+									id="dobFour"
+									onChange={this.changeValue}/>
+							</fieldset>
+						</div>
+						<div className="col-md-3">
+							<fieldset className="form-group">
+							<label>Relationship to Applicant</label>
+								<input
+									className="form-control form-control-lg"
+									type="text"
+									placeholder=""
+									value={additionalOccupants.relationship2ApplicantFour}
+									id="relationship2ApplicantFour"
+									onChange={this.changeValue}/>
+							</fieldset>
+						</div>
+					</div>
+					<div className="row">
+						<div className="col-md-6">
+							<fieldset className="form-group">
+							<label>First, Middle, Last Name</label>
+								<input
+									className="form-control form-control-lg"
+									type="text"
+									placeholder="First, Middle, Last Name"
+									value={additionalOccupants.nameFive}
+									id="nameFive"
+									onChange={this.changeValue}/>
+							</fieldset>
+						</div>
+						<div className="col-md-2">
+							<fieldset className="form-group">
+							<label>DOB</label>
+								<input
+									className="form-control form-control-lg"
+									type="text"
+									placeholder="##/##/##"
+									value={additionalOccupants.dobFive}
+									id="dobFive"
+									onChange={this.changeValue}/>
+							</fieldset>
+						</div>
+						<div className="col-md-3">
+							<fieldset className="form-group">
+							<label>Relationship to Applicant</label>
+								<input
+									className="form-control form-control-lg"
+									type="text"
+									placeholder=""
+									value={additionalOccupants.relationship2ApplicantFive}
+									id="relationship2ApplicantFive"
 									onChange={this.changeValue}/>
 							</fieldset>
 						</div>
@@ -1079,18 +1148,158 @@ class Application extends React.Component{
 								<input
 									className="form-control form-control-lg"
 									type="number"
-									placeholder="2"
-									value={this.props.vehicleNumber}
-									onChange={this.changeVehicleNumber}/>
+									placeholder="Max 2"/>
 							</fieldset>
 						</div>
 					</div>
-					{ vehicleList &&
-						<div>
-						{vehicleList}
+					<div className="row">
+						<div className="col-md-2">
+							<fieldset className="form-group">
+								<label>Make</label>
+									<input
+										className="form-control form-control-lg"
+										type="text"
+										placeholder=""
+										value={vehicles.make1}
+										id="make1"
+										onChange={this.changeValue}/>
+							</fieldset>
 						</div>
-					}
-					
+						<div className="col-md-2">
+							<fieldset className="form-group">
+								<label>Model</label>
+									<input
+										className="form-control form-control-lg"
+										type="text"
+										placeholder=""
+										value={vehicles.model1}
+										id="model1"
+										onChange={this.changeValue}/>
+							</fieldset>
+						</div>
+						<div className="col-md-2">
+							<fieldset className="form-group">
+								<label>Color</label>
+									<input
+										className="form-control form-control-lg"
+										type="text"
+										placeholder=""
+										value={vehicles.color1}
+										id="color1"
+										onChange={this.changeValue}/>
+							</fieldset>
+						</div>
+						<div className="col-md-2">
+							<fieldset className="form-group">
+								<label>Year</label>
+									<input
+										className="form-control form-control-lg"
+										type="text"
+										placeholder=""
+										value={vehicles.year1}
+										id="year1"
+										onChange={this.changeValue}/>
+							</fieldset>
+						</div>
+						<div className="col-md-2">
+							<fieldset className="form-group">
+								<label>License No.</label>
+									<input
+										className="form-control form-control-lg"
+										type="text"
+										placeholder=""
+										value={vehicles.license1}
+										id="license1"
+										onChange={this.changeValue}/>
+							</fieldset>
+						</div>
+						<div className="col-md-2">
+							<fieldset className="form-group">
+								<label>Insurance Policy #</label>
+									<input
+										className="form-control form-control-lg"
+										type="text"
+										placeholder=""
+										value={vehicles.insurance1}
+										id="insurance1"
+										onChange={this.changeValue}/>
+							</fieldset>
+						</div>
+					</div>
+					<div className="row">
+						<div className="col-md-2">
+							<fieldset className="form-group">
+								<label>Make</label>
+									<input
+										className="form-control form-control-lg"
+										type="text"
+										placeholder=""
+										value={vehicles.make2}
+										id="make2"
+										onChange={this.changeValue}/>
+							</fieldset>
+						</div>
+						<div className="col-md-2">
+							<fieldset className="form-group">
+								<label>Model</label>
+									<input
+										className="form-control form-control-lg"
+										type="text"
+										placeholder=""
+										value={vehicles.model2}
+										id="model2"
+										onChange={this.changeValue}/>
+							</fieldset>
+						</div>
+						<div className="col-md-2">
+							<fieldset className="form-group">
+								<label>Color</label>
+									<input
+										className="form-control form-control-lg"
+										type="text"
+										placeholder=""
+										value={vehicles.color2}
+										id="color2"
+										onChange={this.changeValue}/>
+							</fieldset>
+						</div>
+						<div className="col-md-2">
+							<fieldset className="form-group">
+								<label>Year</label>
+									<input
+										className="form-control form-control-lg"
+										type="text"
+										placeholder=""
+										value={vehicles.year2}
+										id="year2"
+										onChange={this.changeValue}/>
+							</fieldset>
+						</div>
+						<div className="col-md-2">
+							<fieldset className="form-group">
+								<label>License No.</label>
+									<input
+										className="form-control form-control-lg"
+										type="text"
+										placeholder=""
+										value={vehicles.license2}
+										id="license2"
+										onChange={this.changeValue}/>
+							</fieldset>
+						</div>
+						<div className="col-md-2">
+							<fieldset className="form-group">
+								<label>Insurance Policy #</label>
+									<input
+										className="form-control form-control-lg"
+										type="text"
+										placeholder=""
+										value={vehicles.insurance2}
+										id="insurance2"
+										onChange={this.changeValue}/>
+							</fieldset>
+						</div>
+					</div>
 					<div className="row">
 						<h3>General Information</h3>
 					</div>
@@ -1284,7 +1493,8 @@ class Application extends React.Component{
 						</div>
 					</div>
 
-					<p>An application fee of <b>$100</b> is required for the cost of processing this application, to obtain credit history and other background information</p>
+					<p>An application fee of <b>$100</b> is required for the cost of processing this application, to obtain credit history and other background information.
+					An application fee of <b>$50</b> will also be required for each additional adult.</p>
 					<p>Applicant represents that all information given on this application is true and correct. Applicant hereby authorizes verification of all references
 					and facts, including but not limited to current and previous landlords and employers, and personal references. Applicant hereby authorizes owner/agent 
 					to obtain Unlawful Detainer, Credit Reports, Telechecks, and/or criminal background reports. Applicant understands that incomplete or incorrect information

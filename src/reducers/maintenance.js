@@ -18,7 +18,7 @@ export default (state = {}, action) => {
 			}
 			break;
 		case 'UPDATE_FIELD':
-			console.log(...state);
+			console.log(action);
 	      return { ...state, [action.key]: [action.value] };
 	    case 'UPDATE_FILE':
 			console.log(state);

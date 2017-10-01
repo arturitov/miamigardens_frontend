@@ -1,7 +1,7 @@
 import React from 'react';
 import './Banner.css';
 import { Row, Image } from 'react-bootstrap';
-import banner from '../imgs/banner.png';
+import banner from '../imgs/banner-min.png';
 
 
 const Banner = () => (

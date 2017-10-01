@@ -24,6 +24,8 @@ const mapDispatchToProps = dispatch => ({
 	    dispatch({ type: 'UPDATE_FIELD', key: 'phone', value }),
     onChangeDescription: value =>
 	    dispatch({ type: 'UPDATE_FIELD', key: 'description', value }),
+   onChangeAddress: value =>
+   		dispatch({ type:'UPDATE_FIELD', key: 'address' , value}),
     onAddFiles: value =>
 	    dispatch({ type: 'UPDATE_FILE', key: 'files', value }),
 	onChangeFiles: value =>
@@ -38,10 +40,10 @@ const mapDispatchToProps = dispatch => ({
 		dispatch({ type:'DELETE_FILE_URL', key: 'filesUrl', value}),
 	onDeleteImageFile : value =>
 		dispatch({ type:'DELETE_FILE', key: 'files', value}),
-	onSubmitForm: (name, email, phone, description, group, destination) =>
+	onSubmitForm: (name, email, phone, description, group, destination, address) =>
 		dispatch({type: 'MAINTENANCE', 
 				payload: 
-					agent.Maintenance.upload(name, email, phone, description, group, destination)
+					agent.Maintenance.upload(name, email, phone, description, group, destination, address)
 				}),
 	onSubmitFile: (destination, file, fileName) =>
 		dispatch({
@@ -62,10 +64,11 @@ class Maintenance extends React.Component {
 		this.changeEmail = ev => this.props.onChangeEmail(ev.target.value);
 		this.changePhone = ev => this.props.onChangePhone(ev.target.value);
 		this.changeDescription = ev => this.props.onChangeDescription(ev.target.value);
+		this.changeAddress= ev => this.props.onChangeAddress(ev.target.value);
 		// this.changeFiles = ev => this.props.onChangeFiles(ev.target.files[0]);
 		// this.AddMoreFiles = ev => this.props.onAddFiles(ev.target.files[0]);
 		this.changeGroup = ev => this.props.onChangeGroup(ev.target.value);
-		this.submitForm = (name, email, phone, description, files, group) => ev => {
+		this.submitForm = (name, email, phone, description, files, group, address) => ev => {
 			ev.preventDefault();
 			document.getElementById("myform").reset();
 
@@ -76,7 +79,7 @@ class Maintenance extends React.Component {
 			    };
 			}
 
-			this.props.onSubmitForm(name, email, phone, description, group, destination);
+			this.props.onSubmitForm(name, email, phone, description, group, destination, address);
 			window.location.reload();
 		};
 	}
@@ -120,6 +123,7 @@ class Maintenance extends React.Component {
 		const email = this.props.email;
 		const phone = this.props.phone;
 		const description = this.props.description;
+		const address = this.props.address;
 		const files = this.props.files;
 		const group = this.props.group;
 		const properties = this.props.properties;
@@ -136,7 +140,6 @@ class Maintenance extends React.Component {
 			);
 		}
 
-		console.log(properties);
 		const groupList = properties.map((group) =>
 			<option key={group._id} value={group.name}>{group.name}</option>
 		);
@@ -165,7 +168,7 @@ class Maintenance extends React.Component {
 							<h1 className="text-center">Maintenance Request</h1>
 							<p className="text-center">Please provide as much information as you can below and we will get back to you soon!</p>
 						<ListErrors errors={this.props.errors} />
-						<form id="myform" onSubmit={this.submitForm(name, email, phone, description, files, group)}>
+						<form id="myform" onSubmit={this.submitForm(name, email, phone, description, files, group, address)}>
 			                <fieldset>
 
 			                  <fieldset className="form-group">
@@ -214,6 +217,15 @@ class Maintenance extends React.Component {
 			                  	    <option>--</option>
 			                  		{groupList}
 			                  	</select>
+			                  </fieldset>
+
+			                  <fieldset className="form-group">
+			                    <input
+			                      className="form-control form-control-lg"
+			                      type="text"
+			                      placeholder="Address" 
+			                      value={address} 
+			                      onChange={this.changeAddress}/>
 			                  </fieldset>
 
 

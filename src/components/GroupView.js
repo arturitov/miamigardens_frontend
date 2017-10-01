@@ -45,7 +45,9 @@ class GroupView extends React.Component {
 			console.log(group);
 			var images = group.images.map((image, index) => 
 				<div key={index}>
-                <img style={{height:"200px", width:"auto"}}className="center-block" alt="Carousel Bootstrap First" src={image}></img>
+				<a target="_blank" href={image}>
+	                <img style={{height:"200px", width:"auto"}}className="center-block" alt="Carousel Bootstrap First" src={image}></img>
+				</a>
 				</div>
 			);
 			console.log(group.schools);
@@ -66,6 +68,11 @@ class GroupView extends React.Component {
 			var trashDays = group.utility.trash.map((day, index) =>
 				<li key={index}>{day}</li>
 			);
+			if(group.utility.recycle){
+				var recycle = group.utility.recycle.map((day, index) =>
+					<li key={index}>{day}</li>
+				);
+			}
 			console.log(images);
 		}
 		return (
@@ -95,8 +102,7 @@ class GroupView extends React.Component {
 						{schools}
 					</Collapsible>
 					<Collapsible trigger="Rules and Regulations">
-						<p>This is the collapsible content. It can be any element or React component you like.</p>
-						<p>It can even be another Collapsible component. Check out the next section!</p>
+						<p>Click <a target="_blank" href={group.rules}>here</a> to view the Rules and Regulations for {group.name} </p>
 					</Collapsible>
 					<Collapsible trigger="General Information">
 						<div className="row">
@@ -138,6 +144,22 @@ class GroupView extends React.Component {
 								</ul>
 							</div>
 						</div>
+						{ recycle &&
+							<div>
+								<div className="row">
+									<div className="col-xs-11">
+										<h3>Recycle Days</h3>
+									</div>
+								</div>
+								<div className="row">
+									<div className="col-xs-11">
+										<ul>
+											{recycle}
+										</ul>
+									</div>
+								</div>
+							</div>
+						}
 					</Collapsible>
 
 					<footer/>

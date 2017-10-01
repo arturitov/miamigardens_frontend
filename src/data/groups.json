@@ -36,7 +36,7 @@
 	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/golfview/29-min.JPG"
 	    ],
 	    "thumbnail": [
-	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/golfview/golfview_thumbnail.jpg"
+	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/golfview/thumbnail.png"
 	    ],
 	    "schools": [
 	        {
@@ -70,7 +70,10 @@
 	        },
 	        "trash": [
 	            "Tuesdays",
-	            "Thursdays"
+	            "Fridays"
+	        ],
+	        "recycle": [
+	        	"Fridays"
 	        ]
 	    },
 	    "__v": 0
@@ -88,31 +91,30 @@
 	    "client": {
 	        "$oid": "596d03146657cc0011d46ee3"
 	    },
-	    "rules": "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/golfview/Golfview+Townhome+Rules+and+Regulations.pdf",
+	    "rules": "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/solabella/Solabella+Rules+and+Regulations.pdf",
 	     "images": [
-	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/golfview/1-min.JPG",
-	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/golfview/10-min.JPG",
-	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/golfview/11-min.JPG",
-	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/golfview/12-min.JPG",
-	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/golfview/13-min.JPG",
-	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/golfview/18-min.JPG",
-	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/golfview/15-min.JPG",
-	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/golfview/17-min.JPG",
-	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/golfview/19-min.JPG",
-	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/golfview/2-min.JPG",
-	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/golfview/20-min.JPG",
-	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/golfview/21-min.JPG",
-	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/golfview/22-min.JPG",
-	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/golfview/23-min.JPG",
-	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/golfview/24-min.JPG",
-	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/golfview/25-min.JPG",
-	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/golfview/26-min.JPG",
-	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/golfview/27-min.JPG",
-	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/golfview/28-min.JPG",
-	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/golfview/29-min.JPG"
+	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/solabella/1-min.JPG",
+	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/solabella/10-min.JPG",
+	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/solabella/11-min.JPG",
+	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/solabella/12-min.JPG",
+	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/solabella/13-min.JPG",
+	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/solabella/14-min.JPG",
+	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/solabella/15-min.JPG",
+	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/solabella/16-min.JPG",
+	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/solabella/17-min.JPG",
+	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/solabella/18-min.JPG",
+	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/solabella/19-min.JPG",
+	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/solabella/2-min.JPG",
+	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/solabella/3-min.JPG",
+	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/solabella/4-min.JPG",
+	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/solabella/5-min.JPG",
+	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/solabella/6-min.JPG",
+	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/solabella/7-min.JPG",
+	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/solabella/8-min.JPG",
+	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/solabella/9-min.JPG"
 	    ],
 	    "thumbnail": [
-	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/golfview/golfview_thumbnail.jpg"
+	        "https://s3.us-east-2.amazonaws.com/domishub-assets/miami-gardens-2607-LLC/solabella/thumbnail.png"
 	    ],
 	    "schools": [
 	        {
@@ -138,15 +140,16 @@
 	    "utility": {
 	        "water": {
 	            "name": "Tamarac Water Department",
-	            "tel": "9545973750"
+	            "tel": "3056657477"
 	        },
 	        "electricity": {
 	            "name": "FPL",
 	            "tel": "18002263545"
 	        },
 	        "trash": [
-	            "Tuesdays",
-	            "Thursdays"
+	            "Mondays",
+	            "Thursdays",
+	            "Fridays"
 	        ]
 	    },
 	    "__v": 0

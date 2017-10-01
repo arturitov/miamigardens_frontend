@@ -105,15 +105,15 @@ class Contact extends React.Component{
 		            <div className="col-md-4">
 		                <h3>Contact Details</h3>
 		                <p>
-		                    9999 Bird Rd<br/>Maimi, FL 33155<br/>
+		                    17387 nw 7av Miami gardens fl 33169<br/>
 		                </p>
 		                <p><i className="fa fa-phone"></i> 
-		                    <abbr title="Phone">P</abbr>: (999) 999-9999</p>
+		                    <abbr title="Phone">P</abbr>: (305) 361-0029</p>
 		                <p><i className="fa fa-envelope-o"></i> 
-		                    <abbr title="Email">E</abbr>: <a href="mailto:miguel@miamigardens2608.com">miguel@miamigardens2608.com</a>
+		                    <abbr title="Email">E</abbr>: <a href="mailto:investmentfirstgroup@gmail.com">investmentfirstgroup@gmail.com</a>
 		                </p>
 		                <p><i className="fa fa-clock-o"></i> 
-		                    <abbr title="Hours">H</abbr>: Monday - Friday: 9:00 AM to 5:00 PM</p>
+		                    <abbr title="Hours">H</abbr>: M, T, TH, F: 9 AM to 4 PM</p>
 		                
 		            </div>
 
