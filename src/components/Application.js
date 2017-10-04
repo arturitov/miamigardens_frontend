@@ -252,6 +252,9 @@ class Application extends React.Component{
 			license2: this.props.license2,
 			insurance2: this.props.insurance2,
 		}
+
+		var signature = this.props.signature;
+
 		var data = {
 				applicantInfo, 
 				additionalOccupants, 
@@ -262,7 +265,8 @@ class Application extends React.Component{
 				income,
 				personalReferences,
 				propertyInformation,
-				vehicles
+				vehicles,
+				signature
 			 };
 		//this.props.applicantInfo;
 
@@ -311,6 +315,7 @@ class Application extends React.Component{
 			                  	<select name="groups" 
 			                  	  className="form-control form-control-lg"
 			                  	  value={group}
+			                  	  required
 			                  	  onChange={this.changeGroup}>
 			                  	    <option>--</option>
 			                  		{groupList}
@@ -366,6 +371,7 @@ class Application extends React.Component{
 								<input
 									className="form-control form-control-lg"
 									type="text"
+									required
 									placeholder="First Name"
 									value={applicantInfo.firstName}
 									onChange={this.changeValue}
@@ -390,6 +396,7 @@ class Application extends React.Component{
 								<input
 									className="form-control form-control-lg"
 									id="lastName"
+									required
 									type="text"
 									placeholder="Last Name"
 									value={applicantInfo.lastName}
@@ -400,6 +407,7 @@ class Application extends React.Component{
 							<fieldset className="form-group">
 							<label>DOB</label>
 								<input
+									required
 									className="form-control form-control-lg"
 									type="text"
 									placeholder="##/##/##"
@@ -414,6 +422,7 @@ class Application extends React.Component{
 							<fieldset className="form-group">
 							<label>Email Address</label>
 								<input
+									required
 									className="form-control form-control-lg"
 									type="email"
 									placeholder="Email"
@@ -465,9 +474,10 @@ class Application extends React.Component{
 							<fieldset className="form-group">
 							<label>Social Security #</label>
 								<input
+									required
 									className="form-control form-control-lg"
 									type="password"
-									placeholder="xxx-xx-xxxx"
+									placeholder="xxx-xx-xxxx or NA"
 									value={applicantInfo.socialSecurity}
 									id="socialSecurity"
 									onChange={this.changeValue}/>
@@ -477,6 +487,7 @@ class Application extends React.Component{
 							<fieldset className="form-group">
 							<label>Drivers License #</label>
 								<input
+									required
 									className="form-control form-control-lg"
 									type="text"
 									placeholder="Driver's License #"
@@ -489,6 +500,7 @@ class Application extends React.Component{
 							<fieldset className="form-group">
 							<label>Upload Copy of License</label>
 								<input
+								  required
 			                      className="form-control form-control-lg"
 			                      type="file"
 			                      placeholder="Upload Copy of License"
@@ -501,6 +513,7 @@ class Application extends React.Component{
 							<fieldset className="form-group">
 			                  	<label>Credit Score</label>
 			                  	<select name="groups" 
+			                  	  required
 			                  	  className="form-control form-control-lg"
 			                  	  value={applicantInfo.credit}
 			                  	  onChange={this.changeValue}
@@ -946,6 +959,7 @@ class Application extends React.Component{
 							<fieldset className="form-group">
 							<label>Current Employer</label>
 								<input
+									required
 									className="form-control form-control-lg"
 									type="text"
 									placeholder=""
@@ -958,6 +972,7 @@ class Application extends React.Component{
 							<fieldset className="form-group">
 							<label>Occupation</label>
 								<input
+									required
 									className="form-control form-control-lg"
 									type="text"
 									placeholder=""
@@ -972,6 +987,7 @@ class Application extends React.Component{
 							<fieldset className="form-group">
 							<label>Employer Address</label>
 								<input
+									required
 									className="form-control form-control-lg"
 									type="text"
 									placeholder="1234 NW 8th St Miami, FL 33315"
@@ -996,6 +1012,7 @@ class Application extends React.Component{
 							<fieldset className="form-group">
 							<label>Date of Employment (From/To)</label>
 								<input
+									required
 									className="form-control form-control-lg"
 									type="text"
 									placeholder="mm/dd/yy - mm/dd/yy"
@@ -1010,6 +1027,7 @@ class Application extends React.Component{
 							<fieldset className="form-group">
 							<label>Supervisors Name</label>
 								<input
+									required
 									className="form-control form-control-lg"
 									type="text"
 									placeholder=""
@@ -1022,6 +1040,7 @@ class Application extends React.Component{
 							<fieldset className="form-group">
 							<label>Monthly Pay</label>
 								<input
+									required
 									className="form-control form-control-lg"
 									type="text"
 									placeholder=""
@@ -1066,6 +1085,7 @@ class Application extends React.Component{
 							<fieldset className="form-group">
 								<label>Full Name</label>
 								<input
+									required
 									className="form-control form-control-lg"
 									type="text"
 									placeholder="Jane Smith"
@@ -1078,6 +1098,7 @@ class Application extends React.Component{
 							<fieldset className="form-group">
 								<label>Relationship to Applicant</label>
 								<input
+									required
 									className="form-control form-control-lg"
 									type="text"
 									placeholder="Supervisor"
@@ -1090,6 +1111,7 @@ class Application extends React.Component{
 							<fieldset className="form-group">
 								<label>Phone Number</label>
 								<input
+									required
 									className="form-control form-control-lg"
 									type="text"
 									placeholder="(###)-###-####"
@@ -1104,6 +1126,7 @@ class Application extends React.Component{
 							<fieldset className="form-group">
 								<label>Full Name</label>
 								<input
+									required
 									className="form-control form-control-lg"
 									type="text"
 									placeholder="Jane Smith"
@@ -1116,6 +1139,7 @@ class Application extends React.Component{
 							<fieldset className="form-group">
 								<label>Relationship to Applicant</label>
 								<input
+									required
 									className="form-control form-control-lg"
 									type="text"
 									placeholder="Supervisor"
@@ -1128,6 +1152,7 @@ class Application extends React.Component{
 							<fieldset className="form-group">
 								<label>Phone Number</label>
 								<input
+									required
 									className="form-control form-control-lg"
 									type="text"
 									placeholder="(###)-###-####"
@@ -1531,9 +1556,14 @@ class Application extends React.Component{
 	                	<p> I, the applicant for this property application, warrant the truthfulness of the information provided in this application.</p>
 
 						<label>Electronic Signature</label>
-	                	<input type="text" required placeholder="First and Last Name"/>
+	                	<input type="text" 
+		                	required 
+		                	placeholder="Legal First and Last Name"
+		                	value={signature}
+							id="signature"
+							onChange={this.changeValue}/>
 	                	<label>
-		                	<input id="checkBox" type="checkbox"/> 
+		                	<input required id="checkBox" type="checkbox"/> 
 		                	I understand that checking this box constitutes a legal signature confirming that I acknowledge and agree to the above Terms of Acceptance.
 		                </label>
 	                
