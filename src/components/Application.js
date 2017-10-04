@@ -1152,7 +1152,7 @@ class Application extends React.Component{
 							<fieldset className="form-group">
 								<label>Phone Number</label>
 								<input
-									required
+									required 
 									className="form-control form-control-lg"
 									type="text"
 									placeholder="(###)-###-####"
